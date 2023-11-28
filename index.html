@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Simply Bank</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p class="welcome">Login to your account</p>
+        <img src="./images/logo.png" alt="logo" class="logo" />
+        <form class="login">
+          <input
+            type="text"
+            placeholder="user"
+            class="login__input login__input--user"
+          />
+          <!-- In real applications it is used type="password" -->
+          <input
+            type="text"
+            placeholder="PIN"
+            maxlength="4"
+            class="login__input login__input--pin"
+          />
+          <button class="login__btn">&rarr;</button>
+        </form>
+      </nav>
+    </header>
+    <main class="app">
+      <!-- Balance -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">WITH <span class="date">03/12/2021</span></p>
+        </div>
+        <p class="balance__value">0000$</p>
+      </div>
+      <!-- Transactions -->
+      <div class="transactions">
+        <div class="transactions__row">
+          <div class="transactions__type transactions__type--deposit">
+            2 deposit
+          </div>
+          <div class="transactions__date">2 days ago</div>
+          <div class="transactions__value">5 000$</div>
+        </div>
+        <div class="transactions__row">
+          <div class="transactions__type transactions__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="transactions__date">21/01/2022</div>
+          <div class="transactions__value">-256S</div>
+        </div>
+      </div>
+      <!-- Total -->
+      <div class="total">
+        <p class="total__label">Receipt</p>
+        <p class="total__value total__value--in">0000$</p>
+        <p class="total__label">Conclusion</p>
+        <p class="total__value total__value--out">0000$</p>
+        <p class="total__label">Percent</p>
+        <p class="total__value total__value--interest">0000$</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </div>
+      <!-- Operation - Transfers -->
+      <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Recipient</label>
+          <label class="form__label">Sum</label>
+        </form>
+      </div>
+      <!-- Operation - Loan -->
+      <div class="operation operation--loan">
+        <h2>Request a loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Sum</label>
+        </form>
+      </div>
+      <!-- Operation - Close -->
+      <div class="operation operation--close">
+        <h2>Close an account</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label"> Verify name</label>
+          <label class="form__label">Verify PIN</label>
+        </form>
+      </div>
+      <!-- Logout timer -->
+      <p class="logout-timer">
+        Exit the application via <span class="timer">05:00</span>
+      </p>
+    </main>
+
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
