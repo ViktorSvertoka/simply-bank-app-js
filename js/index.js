@@ -140,6 +140,19 @@ const updateUi = function (account) {
 
 let currentAccount;
 
+// Always logged in
+
+currentAccount = account1;
+updateUi(currentAccount);
+containerApp.style.opacity = 100;
+
+const now = new Date();
+const day = now.getDate();
+const month = now.getMonth() + 1;
+const year = now.getFullYear();
+
+labelDate.textContent = `${day}/${month}/${year}`;
+
 // Event Handlers
 
 btnLogin.addEventListener('click', function (e) {
